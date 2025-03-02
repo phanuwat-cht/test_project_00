@@ -1,0 +1,48 @@
+import streamlit as st
+import random
+
+def generate_design(requirements):
+    """Simulate design generation based on user requirements."""
+    design_variations = [
+        "Modern Minimalist Living Room",
+        "Classic European Bedroom",
+        "Scandinavian Kitchen",
+        "Japanese Zen Bathroom",
+        "Industrial Loft Workspace"
+    ]
+    return random.choice(design_variations)
+
+# Streamlit Page Configuration
+st.set_page_config(page_title="Design Result", page_icon="🎨", layout="wide")
+
+# Main Content
+st.title("🎨 Design Generation Result")
+st.markdown("Below is the design concept based on your provided requirements.")
+
+# Simulated Requirements (In practice, this should come from user inputs on the homepage)
+user_requirements = {
+    "Style Preference": "Modern",
+    "Room Type": "Living Room",
+    "Space Size": "40 sq.m",
+    "Budget Range": "100,000 - 200,000 THB"
+}
+
+# Display User Requirements
+st.subheader("📌 Your Requirements")
+st.json(user_requirements)
+
+# Generate and Display Design Result
+st.subheader("🖼️ Generated Design Concept")
+design_output = generate_design(user_requirements)
+st.success(f"Your design concept: **{design_output}**")
+
+# Action Buttons
+col1, col2 = st.columns(2)
+
+with col1:
+    if st.button("🔄 Regenerate Design"):
+        st.experimental_rerun()
+
+with col2:
+    if st.button("📋 Go to BOQ Summary"):
+        st.switch_page("boq_summarize.py")
