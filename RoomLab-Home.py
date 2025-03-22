@@ -384,7 +384,7 @@ def home_page():
                 <p>Tell us about your space, preferences, and requirements</p>
                 <p>🏠</p>
             </div>
-            """, unsafe_allow_html=True), unsafe_allow_html=True)
+            """, unsafe_allow_html=True)
             
         with cols[1]:
             st.markdown("""
