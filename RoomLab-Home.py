@@ -1800,7 +1800,7 @@ def quote_page():
             """, unsafe_allow_html=True)
         
         with col2:
-            st.markdown(f"""
+            st.markdown("""
             <div class="card" style="height: 100%;">
                 <h4 style="margin-top: 0;">Bathroom Costs</h4>
                 <div style="display: flex; justify-content: space-between; margin-bottom
