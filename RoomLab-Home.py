@@ -384,7 +384,7 @@ def home_page():
                 <p>Tell us about your space, preferences, and requirements</p>
                 <p>🏠</p>
             </div>
-            """, unsafe_allow_html=True)
+            """, unsafe_allow_html=True), unsafe_allow_html=True)
             
         with cols[1]:
             st.markdown("""
@@ -1367,6 +1367,7 @@ def dashboard_page():
                 """, unsafe_allow_html=True)
     
     with tab3:
+        # Bathroom section
         # Account Settings
         st.markdown("<h3>Profile Information</h3>", unsafe_allow_html=True)
         
@@ -1800,7 +1801,33 @@ def quote_page():
             """, unsafe_allow_html=True)
         
         with col2:
-            st.markdown("""
+            st.markdown(f"""
             <div class="card" style="height: 100%;">
                 <h4 style="margin-top: 0;">Bathroom Costs</h4>
-                <div style="display: flex; justify-content: space-between; margin-bottom
+                <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                    <span>Fixtures & Sanitaryware:</span>
+                    <span style="font-weight: bold;">45,000฿</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                    <span>Tiling & Flooring:</span>
+                    <span style="font-weight: bold;">30,000฿</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                    <span>Shower/Bath:</span>
+                    <span style="font-weight: bold;">25,000฿</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                    <span>Vanity & Storage:</span>
+                    <span style="font-weight: bold;">18,000฿</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                    <span>Lighting & Accessories:</span>
+                    <span style="font-weight: bold;">12,000฿</span>
+                </div>
+                <hr>
+                <div style="display: flex; justify-content: space-between; font-weight: bold; color: {colors['accent']};">
+                    <span>Subtotal:</span>
+                    <span>130,000฿</span>
+                </div>
+            </div>
+            """
